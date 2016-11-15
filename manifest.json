@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+
+  "name": "evil",
+  "description": "This is just an example, please do not use it.",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "evil.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [ "https://music.yandex.ua/*" ],
+      "js": [ "evil.js" ],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "https://music.yandex.ua/*"
+  ]
+}
